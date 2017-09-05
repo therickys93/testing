@@ -1,11 +1,17 @@
+default: libtesting.a
+	
+install: default
+	cp libtesting.a /usr/local/lib
+	cp testing.h /usr/local/include
+	
 test: main
 	./main
 
-main: testing.a
-	gcc -o main main.c testing.a
+main: libtesting.a
+	gcc -o main main.c libtesting.a
 
-testing.a: testing.o
-	ar -cvq testing.a testing.o
+libtesting.a: testing.o
+	ar -cvq libtesting.a testing.o
 
 testing.o:
 	gcc -Wall -c testing.c
@@ -13,4 +19,4 @@ testing.o:
 clean:
 	rm main
 	rm testing.o
-	rm testing.a
+	rm libtesting.a
