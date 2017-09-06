@@ -19,6 +19,9 @@ libtesting.a: objects
 objects:
 	gcc -Wall -c $(SOURCE)
 
+build: clean
+	bash build.sh
+
 clean:
 	rm $(OBJS)
 	rm libtesting.a
