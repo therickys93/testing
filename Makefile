@@ -17,6 +17,6 @@ testing.o:
 	gcc -Wall -c testing.c
 
 clean:
-	rm main
 	rm testing.o
 	rm libtesting.a
+	rm main
