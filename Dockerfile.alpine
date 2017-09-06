@@ -1,0 +1,4 @@
+FROM alpine
+RUN apk update && apk add bash git make build-base && mkdir -p /usr/local/include
+RUN git clone https://therickys93@bitbucket.org/therickys93/testing.git && \
+    cd testing && make && make install
