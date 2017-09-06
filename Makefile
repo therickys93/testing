@@ -1,5 +1,5 @@
-OBJS=testing.o
-SOURCE=testing.c
+OBJS=assert_bool.o assert_equals.o
+SOURCE=assert_bool.c assert_equals.c
 
 default: libtesting.a
 	
@@ -13,13 +13,13 @@ test: main
 main: libtesting.a
 	gcc -o main main.c libtesting.a
 
-libtesting.a: testing.o
+libtesting.a: objects
 	ar -cvq libtesting.a $(OBJS)
 
-testing.o:
+objects:
 	gcc -Wall -c $(SOURCE)
 
 clean:
-	rm testing.o
+	rm $(OBJS)
 	rm libtesting.a
 	rm main
