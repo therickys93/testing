@@ -1,3 +1,6 @@
+OBJS=testing.o
+SOURCE=testing.c
+
 default: libtesting.a
 	
 install: default
@@ -11,10 +14,10 @@ main: libtesting.a
 	gcc -o main main.c libtesting.a
 
 libtesting.a: testing.o
-	ar -cvq libtesting.a testing.o
+	ar -cvq libtesting.a $(OBJS)
 
 testing.o:
-	gcc -Wall -c testing.c
+	gcc -Wall -c $(SOURCE)
 
 clean:
 	rm testing.o
