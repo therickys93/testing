@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int assert_true_with_file_and_line(int x, const char* file, const int line){
-    if(x == 1) {
+    if(x) {
         printf("testing assert_true on line %d...ok!\n", line);
         return 0;
     } else {
@@ -13,7 +13,7 @@ int assert_true_with_file_and_line(int x, const char* file, const int line){
 }
 
 int assert_false_with_file_and_line(int x, const char* file, const int line){
-    if(x == 0){
+    if(!x){
         printf("testing assert_false on line %d...ok!\n", line);
         return 0;
     } else {
