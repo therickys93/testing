@@ -12,6 +12,8 @@ int main(void){
 	assert_false(FALSE);
 	assert_equals(6, fact(3));
 	assert_not_equals(93, min(19, 93));
+	assert_greater_than(5, 3);
+	assert_lower_than(3, 5);
 	return 0;
 }
 

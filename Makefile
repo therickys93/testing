@@ -1,5 +1,5 @@
-OBJS=assert_bool.o assert_equals.o
-SOURCE=assert_bool.c assert_equals.c
+OBJS=assert_bool.o assert_equals.o assert_disequals.o
+SOURCE=assert_bool.c assert_equals.c assert_disequals.c
 
 default: libtesting.a
 	
