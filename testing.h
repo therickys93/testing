@@ -19,7 +19,13 @@ int assert_not_equals_with_file_and_line(int, int, const char* file, const int l
 int assert_greater_than_with_file_and_line(int, int, const char* file, const int line);
 #define assert_greater_than(x, y) assert_greater_than_with_file_and_line(x, y, __FILE__, __LINE__)
 
+int assert_greater_than_or_equals_with_file_and_line(int x, int y, const char* file, const int line);
+#define assert_greater_than_or_equals(x, y) assert_greater_than_or_equals_with_file_and_line(x, y, __FILE__, __LINE__)
+
 int assert_lower_than_with_file_and_line(int, int, const char* file, const int line);
 #define assert_lower_than(x, y) assert_lower_than_with_file_and_line(x, y, __FILE__, __LINE__)
+
+int assert_lower_than_or_equals_with_file_and_line(int x, int y, const char* file, const int line);
+#define assert_lower_than_or_equals(x, y) assert_lower_than_or_equals_with_file_and_line(x, y, __FILE__, __LINE__)
 
 #endif
