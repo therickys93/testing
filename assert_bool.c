@@ -2,8 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TRUE(x) x
+#define FALSE(x) !x
+
 int assert_true_with_file_and_line(int x, const char* file, const int line){
-    if(x) {
+    if(TRUE(x)) {
         printf("testing assert_true on line %d...ok!\n", line);
         return 0;
     } else {
@@ -13,7 +16,7 @@ int assert_true_with_file_and_line(int x, const char* file, const int line){
 }
 
 int assert_false_with_file_and_line(int x, const char* file, const int line){
-    if(!x){
+    if(FALSE(x)){
         printf("testing assert_false on line %d...ok!\n", line);
         return 0;
     } else {
