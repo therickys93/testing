@@ -4,6 +4,8 @@
 
 #define GREATER_THAN(x, y) x > y
 #define LOWER_THAN(x, y) x < y
+#define GREATER_OR_EQUALS(x, y) x >= y
+#define LOWER_OR_EQUALS(x, y) x <= y
 
 int assert_greater_than_with_file_and_line(int x, int y, const char* file, const int line){
     if(GREATER_THAN(x, y)) {
@@ -16,7 +18,7 @@ int assert_greater_than_with_file_and_line(int x, int y, const char* file, const
 }
 
 int assert_greater_than_or_equals_with_file_and_line(int x, int y, const char* file, const int line){
-    if(x >= y) {
+    if(GREATER_OR_EQUALS(x, y)) {
         printf("testing assert_greater_than_or_equals on line %d...ok!\n", line);
         return 0; 
     } else {
@@ -36,7 +38,7 @@ int assert_lower_than_with_file_and_line(int x, int y, const char* file, const i
 }
 
 int assert_lower_than_or_equals_with_file_and_line(int x, int y, const char* file, const int line){
-    if(x <= y) {
+    if(LOWER_OR_EQUALS(x, y)) {
         printf("testing assert_lower_than_or_equals on line %d...ok!\n", line);
         return 0;
     } else {
