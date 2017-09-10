@@ -3,3 +3,4 @@ RUN apk update && apk add bash make build-base && mkdir -p /usr/local/include
 WORKDIR /testing
 ADD . /testing
 RUN make && make install
+WORKDIR /

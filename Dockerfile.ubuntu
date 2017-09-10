@@ -3,3 +3,4 @@ RUN apt-get update && apt-get install make build-essential -y
 WORKDIR /testing
 ADD . /testing
 RUN make && make install
+WORKDIR /
