@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define GREATER_THAN(x, y) x > y
+#define LOWER_THAN(x, y) x < y
+
 int assert_greater_than_with_file_and_line(int x, int y, const char* file, const int line){
-    if(x > y) {
+    if(GREATER_THAN(x, y)) {
         printf("testing assert_greater_than on line %d...ok!\n", line);
         return 0;
     } else {
@@ -13,7 +16,7 @@ int assert_greater_than_with_file_and_line(int x, int y, const char* file, const
 }
 
 int assert_lower_than_with_file_and_line(int x, int y, const char* file, const int line){
-    if(x < y) {
+    if(LOWER_THAN(x, y)) {
         printf("testing assert_lower_than on line %d...ok!\n", line);
         return 0;
     } else {
