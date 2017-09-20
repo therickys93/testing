@@ -4,6 +4,7 @@ SOURCE=assert_bool.c assert_equals.c assert_disequals.c
 default: libtesting.a
 	
 install: default
+	mkdir -p /usr/local/include
 	cp libtesting.a /usr/local/lib
 	cp testing.h /usr/local/include
 	
